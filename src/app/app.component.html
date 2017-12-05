@@ -11,15 +11,17 @@
       <th>Content</th>
     </tr>
 
+    <tr *ngFor = 'let x of emails'>
+      <td>{{x.email}}</td>
+      <td>
+        <span *ngIf = 'x.important'>High</span>
+        <span *ngIf = '!x.important'>Low</span>
+      </td>
+      <td>{{x.subject}}</td>
+      <td>{{x.content}}</td>
 
-    <tr>
-      <td>{{email}}</td>
-      <td>{{important}}</td>
-      <td>{{subject}}</td>
-      <td>{{content}}</td>
     </tr>
-    
-
+    <!-- end of *ngFor loop -->
   </table>
 
 
